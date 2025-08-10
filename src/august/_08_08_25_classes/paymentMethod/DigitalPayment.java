@@ -5,8 +5,4 @@ public abstract class DigitalPayment extends PaymentMethod {
     public DigitalPayment(String owner) {
         super(owner);
     }
-
-    @Override
-    public void pay(String product) {
-    }
 }

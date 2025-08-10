@@ -6,6 +6,7 @@ public class ExtendedPlayEP extends Record {
         super(name, author, releaseYear);
     }
 
+    @Override
     public String getInfo() {
         return "Type: ep, " + super.getInfo();
     }

@@ -8,7 +8,7 @@ public class TshirtInternetShop extends InternetShop {
 
     @Override
     public void purchase(DigitalPayment digitalPayment, int amount) {
-        System.out.println("Purchased T-shirts using a digital payment: " + amount);
+        digitalPayment.pay(amount + " TShirt");
     }
 
     public void purchase(String promo, int amount) {

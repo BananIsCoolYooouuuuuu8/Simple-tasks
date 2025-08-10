@@ -1,4 +1,4 @@
-package august;
+package august._10_08_25_classes;
 
 import java.util.Scanner;
 
