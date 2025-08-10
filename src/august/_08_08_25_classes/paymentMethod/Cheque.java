@@ -18,7 +18,6 @@ public class Cheque extends OfflinePayment{
         paymentMethod.pay(product);
     }
 
-
     public static void main(String[] args) {
         CreditCard creditCard = new CreditCard("David", "Sber", "3927939");
         PayPal payPal = new PayPal("Alex", "678");
