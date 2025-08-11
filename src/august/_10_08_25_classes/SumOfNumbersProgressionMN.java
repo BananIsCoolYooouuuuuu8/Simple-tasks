@@ -15,5 +15,6 @@ public class SumOfNumbersProgressionMN {
         double n = in.nextDouble();
         double sumMN = (numN - numM + 1) * ((m + n) / 2);
         System.out.println("SumMN: " + sumMN);
+//        PrivateConstructors privateConstructors = PrivateConstructors.getInstance();
     }
 }
