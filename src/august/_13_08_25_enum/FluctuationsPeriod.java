@@ -1,4 +1,4 @@
-package august._12_08_25_enum;
+package august._13_08_25_enum;
 
 import java.util.Scanner;
 
