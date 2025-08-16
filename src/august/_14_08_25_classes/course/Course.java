@@ -13,10 +13,7 @@ public abstract class Course {
         this.difficultyLevel = difficultyLevel;
         this.duration = duration;
     }
-
-    protected Course() {
-    }
-
     public abstract void start();
+    public abstract void start(String dateFinish);
     public abstract void finish();
 }

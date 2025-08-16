@@ -1,4 +1,4 @@
-package august._01_08_25_classes;
+package august;
 
 public class SortingByChoice {
     public static void main(String[] args) {

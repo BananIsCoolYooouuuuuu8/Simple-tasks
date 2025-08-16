@@ -26,5 +26,6 @@ public abstract class GameCharacter {
 
     public abstract void attack(GameCharacter gameCharacter);
     public abstract void heal();
+    public abstract void heal(int healthCount);
     public abstract void takeDamage(int count);
 }

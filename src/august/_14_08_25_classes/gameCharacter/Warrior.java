@@ -23,6 +23,7 @@ public class Warrior extends GameCharacter {
         System.out.println("Warrior is healing 50 HP");
     }
 
+    @Override
     public void heal(int healthCount) {
         setHealth(health + healthCount);
         System.out.println("Warrior is healing " + health + " HP");

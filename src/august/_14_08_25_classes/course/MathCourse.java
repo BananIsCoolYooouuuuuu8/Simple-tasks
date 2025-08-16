@@ -13,8 +13,9 @@ public class MathCourse extends Course {
         System.out.println("studying the course: " + title + " is started.");
     }
 
-    public void start(String dataFinish) {
-        System.out.println("The course " + title + " has been started, " + "the planned completion date is " + dataFinish);
+    @Override
+    public void start(String dateFinish) {
+        System.out.println("The course " + title + " has been started, " + "the planned completion date is " + dateFinish);
     }
 
     @Override
