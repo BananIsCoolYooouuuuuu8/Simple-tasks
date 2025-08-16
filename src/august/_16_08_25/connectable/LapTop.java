@@ -24,6 +24,7 @@ public class LapTop implements Connectable, Rechargeable {
         isConnected = true;
     }
 
+    @Override
     public void disconnect() {
         System.out.println("disconnect");
         isConnected = false;
@@ -60,6 +61,6 @@ public class LapTop implements Connectable, Rechargeable {
         smartphone.chargeFull();
         System.out.println(smartphone.getBatteryLevel());
         smartphone.charge(1);
-        System.out.println(smartphone.toString());
+        System.out.println(smartphone);
     }
 }

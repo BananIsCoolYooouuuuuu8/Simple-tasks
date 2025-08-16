@@ -24,6 +24,7 @@ public class Smartphone implements Connectable, Rechargeable {
         isConnected = true;
     }
 
+    @Override
     public void disconnect() {
         System.out.println("disconnect");
         isConnected = false;

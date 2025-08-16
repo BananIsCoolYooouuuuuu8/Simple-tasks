@@ -1,6 +1,6 @@
 package august._16_08_25.connectable;
 
-interface Rechargeable {
+public interface Rechargeable {
 
     int getBatteryLevel();
 
