@@ -1,11 +1,17 @@
 package august._06_08_25_classes.chef;
 
+import java.util.Objects;
+
 public class Chef {
 
     private String name;
 
     public Chef(String name) {
         this.name = name;
+    }
+
+    public boolean equals(Chef chef) {
+        return Objects.equals(this.name, chef.name);
     }
 
     public void cook(String dish) {

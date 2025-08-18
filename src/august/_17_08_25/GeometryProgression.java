@@ -13,9 +13,8 @@ public class GeometryProgression {
         int firstMemberNum = in.nextInt();
         System.out.println("Enter second high member num:");//n
         int secondMemberNum = in.nextInt();
-        double firstNum = a1 * Math.pow(q, firstMemberNum - 1);
-        double secondNum = a1 * Math.pow(q, secondMemberNum - 1);
-        double sum = (a1 * Math.pow(q, firstMemberNum - 1) * (Math.pow(q, secondMemberNum - firstMemberNum + 1) - 1)) / (q - 1);
+        double sum = (a1 * Math.pow(q, firstMemberNum - 1) *
+                (Math.pow(q, secondMemberNum - firstMemberNum + 1) - 1)) / (q - 1);
         System.out.println("sum M to N: " + sum);
     }
 }

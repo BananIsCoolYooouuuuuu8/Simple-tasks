@@ -1,5 +1,7 @@
 package august._06_08_25_classes.chef;
 
+import java.util.Objects;
+
 public class Waiter {
 
     private String name;
@@ -8,6 +10,10 @@ public class Waiter {
     public Waiter(String name, Chef chef) {
         this.name = name;
         this.chef = chef;
+    }
+
+    public boolean equals(Waiter waiter) {
+        return Objects.equals(this.name, waiter.name);
     }
 
     public void takeOrder(Client client, String dish) {

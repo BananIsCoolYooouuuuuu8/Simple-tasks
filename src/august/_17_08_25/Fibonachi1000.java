@@ -16,11 +16,11 @@ public class Fibonachi1000 {
 //            f1 = fn;
 //        }
 //        System.out.println(fn);
-        System.out.println(Fibonachi1000.fibonachiM(5));
-        System.out.println(Fibonachi1000.fibonachiSum());
+        System.out.println(Fibonachi1000.fibonacciM(5));
+        System.out.println(Fibonachi1000.fibonacciSum());
     }
 
-    public static double fibonachiM(double m) {
+    public static double fibonacciM(double m) {
         double f1 = 1;
         double f0 = 1;
         double fn = 0;
@@ -32,7 +32,7 @@ public class Fibonachi1000 {
         return fn;
     }
 
-    public static double fibonachiSum() {
+    public static double fibonacciSum() {
         double f1f2 = 1;
         double f0f2 = 1;
         double fnf2 = 0;

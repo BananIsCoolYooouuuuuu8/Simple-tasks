@@ -10,6 +10,15 @@ public class FuelTank {
         this.level = level;
     }
 
+    public FuelTank(FuelTank fuelTank) {
+        this.capacity = fuelTank.capacity;
+        this.level = fuelTank.level;
+    }
+
+    public boolean equals(FuelTank fuelTank) {
+        return this.capacity == fuelTank.capacity;
+    }
+
     public int getCapacity() {
         return capacity;
     }

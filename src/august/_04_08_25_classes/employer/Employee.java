@@ -1,5 +1,7 @@
 package august._04_08_25_classes.employer;
 
+import java.util.Objects;
+
 public class Employee {
 
     private String name;
@@ -7,6 +9,10 @@ public class Employee {
 
     public Employee(String name) {
         this.name = name;
+    }
+
+    public boolean equals(Employee employee) {
+        return Objects.equals(this.name, employee.name);//=,eq
     }
 
     public void doTask(String task) {

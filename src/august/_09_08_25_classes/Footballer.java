@@ -8,6 +8,10 @@ public class Footballer {
     private String club;
     private String nation;
 
+    public boolean equals(Footballer footballer) {
+        return this.name.equals(footballer.name);
+    }
+
     public Footballer(String name, String surname, String position, String club, String nation) {
         this.name = name;
         this.surname = surname;
