@@ -17,9 +17,12 @@ public class FiveClassesEquals {
         Employee employee = new Employee("bob");
         Employee employee2 = new Employee("bob");
         System.out.println(employee.equals(employee2));
-        Chef chef = new Chef("Rick");
+        Chef chef = null;
         Chef chef2 = new Chef("Rick");
-        System.out.println(chef.equals(chef2));
+        System.out.println(chef == chef2);
+//        System.out.println(chef.equals(chef2));
+        System.out.println(chef2.equals(chef));
+//        chef.cook("fff");
         Waiter waiter = new Waiter("sarah", chef);
         Waiter waiter2 = new Waiter("sarah", chef);
         System.out.println(waiter.equals(waiter2));
