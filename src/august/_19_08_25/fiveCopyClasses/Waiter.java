@@ -1,4 +1,4 @@
-package august._19_08_25.fiveClassesCopy;
+package august._19_08_25.fiveCopyClasses;
 
 import august._06_08_25_classes.chef.Client;
 
