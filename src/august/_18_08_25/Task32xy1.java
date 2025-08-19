@@ -4,6 +4,10 @@ import july.Eighteen;
 
 public class Task32xy1 {
     public static void main(String[] args) {
+        task32();
+    }
+
+    private static void task32() {
         double x1 = 1;
         System.out.println("x1: " + x1);
         double y1 = 1;
