@@ -1,4 +1,6 @@
-package august._17_08_25;
+package august._19_08_25;
+
+import java.util.Objects;
 
 public class Man {
 
@@ -8,8 +10,18 @@ public class Man {
         this.dnaCode = dnaCode;
     }
 
-    public boolean equals(Man man) {
-        return (this.dnaCode == man.dnaCode);
+    public boolean equals(Object object) {
+        if (this == object) {
+            return true;
+        }
+        if (object == null) {
+            return false;
+        }
+        if (!(object instanceof Man)) {
+            return false;
+        }
+        Man man = (Man) object;
+        return Objects.equals(this.dnaCode, ((Man) object).dnaCode);
     }
     public static void main(String[] args) {
         Man man = new Man(5);

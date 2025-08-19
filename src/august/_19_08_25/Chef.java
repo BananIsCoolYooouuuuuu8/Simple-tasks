@@ -1,4 +1,4 @@
-package august._06_08_25_classes.chef;
+package august._19_08_25;
 
 import java.util.Objects;
 
@@ -41,5 +41,17 @@ public class Chef {
         Chef chef = new Chef("bob");
         Chef chef2 = new Chef("bob");
         System.out.println(chef.equals(chef2));
+        Employee employee = new Employee("john");
+        Employee employee2 = new Employee("john");
+        System.out.println(employee.equals(employee2));
+        FuelTank fuelTank = new FuelTank(100, 4);
+        FuelTank fuelTank2 = new FuelTank(100, 3);
+        System.out.println(fuelTank.equals(fuelTank2));
+        Man man = new Man(777);
+        Man man2 = new Man(777);
+        System.out.println(man.equals(man2));
+        Waiter waiter = new Waiter("steve", chef);
+        Waiter waiter2 = new Waiter("steve", chef);
+        System.out.println(waiter.equals(waiter2));
     }
 }
