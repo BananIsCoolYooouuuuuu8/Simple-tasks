@@ -20,7 +20,7 @@ public class Clock {
 
 
 
-    public class Hand {
+    private class Hand {
 
         private int hours;
 
