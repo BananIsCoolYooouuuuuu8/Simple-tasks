@@ -15,14 +15,16 @@ public class Bicycle {
     }
 
     public class HandleBar{
-        public void right() {
+        private void right() {
             System.out.println("right");
         }
     }
 
     public class Seat {
+        HandleBar handleBar = new HandleBar();
         public void up() {
             System.out.println("seat up");
+            handleBar.right();
         }
     }
 
