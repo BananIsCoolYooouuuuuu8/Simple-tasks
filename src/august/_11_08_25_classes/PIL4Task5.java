@@ -1,6 +1,6 @@
 package august._11_08_25_classes;
 
-public class PIL4Task5 {
+public class    PIL4Task5 {
     public static void main(String[] args) {
         double e = Math.pow(10, -3);
         int k = 1;

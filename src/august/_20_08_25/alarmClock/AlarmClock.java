@@ -1,4 +1,4 @@
-package august.alarmClock;
+package august._20_08_25.alarmClock;
 
 public class AlarmClock {
 

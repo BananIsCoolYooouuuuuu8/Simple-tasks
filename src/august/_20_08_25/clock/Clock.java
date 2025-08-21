@@ -1,4 +1,4 @@
-package august.clock;
+package august._20_08_25.clock;
 
 public class Clock {
 
