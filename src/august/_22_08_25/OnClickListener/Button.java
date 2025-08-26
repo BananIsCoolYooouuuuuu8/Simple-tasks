@@ -22,7 +22,7 @@ public class Button implements OnClickListener {
 
     @Override
     public String toString() {
-        return "title: " + title + ", button color: " + buttonColor + ", title color: " + titleColor + ", shape: " + shape;// + ", size: " + size;
+        return "title: " + title + ", button color: " + buttonColor + ", title color: " + titleColor + ", shape: " + shape + ", size: " + size;
     }
 
     @Override
@@ -58,20 +58,27 @@ public class Button implements OnClickListener {
     }
 
     public static void main(String[] args) {
-        Shape shape = Shape.RIGHTANGELS;
+        Shape shape = Shape.RIGHT_ANGLES;
         Shape shape2 = Shape.CIRCLE;
         Size size = new Size(6, 3);
-        Size size2 = new Size(7, 9);
+        Size size2 = new Size(6, 3);
         OnClickListener onClickListener = new OnClickListener() {
             @Override
             public void onClick() {
                 System.out.println("button is clicked");
             }
         };
+        OnClickListener onClickListener2 = new OnClickListener() {
+            @Override
+            public void onClick() {
+                System.out.println("button is clicked");
+            }
+        };
         Button button = new Button("play", Color.GREEN,Color.BLACK, shape, size, onClickListener);
-        Button button2 = new Button("play", Color.BLUE, Color.WHITE,shape, size2, onClickListener);
+        Button button2 = new Button("play", Color.GREEN,Color.BLACK, shape, size2, onClickListener2);
+//        Button button2 = new Button("play", Color.BLUE, Color.WHITE,shape2, size2, onClickListener);
         button.click();
         System.out.println(button.equals(button2));
-        System.out.println(button.toString());
+        System.out.println(button);
     }
 }
