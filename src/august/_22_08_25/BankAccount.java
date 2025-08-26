@@ -18,10 +18,7 @@ public class BankAccount {
 
         class Validator {
             public boolean validate(int amount) {
-                if (balance >= amount && balance > 0) {
-                    return true;
-                }
-                return false;
+                return balance >= amount && balance > 0;
             }
         }
 
