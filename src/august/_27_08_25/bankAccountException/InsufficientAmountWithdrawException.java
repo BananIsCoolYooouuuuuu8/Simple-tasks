@@ -1,4 +1,4 @@
-package august._27_08_25;
+package august._27_08_25.bankAccountException;
 
 public class InsufficientAmountWithdrawException extends Exception {
 
