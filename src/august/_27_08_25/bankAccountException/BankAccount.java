@@ -32,9 +32,7 @@ public class BankAccount {
         BankAccount bankAccount = new BankAccount("234", -1);
         try {
             bankAccount.withdraw(500);
-        } catch (NegativeAmountWithdrawException e) {
-            System.err.println(e.getMessage());
-        } catch (InsufficientAmountWithdrawException e) {
+        } catch (NegativeAmountWithdrawException | InsufficientAmountWithdrawException e) {
             System.err.println(e.getMessage());
         }
         bankAccount.printBalance();

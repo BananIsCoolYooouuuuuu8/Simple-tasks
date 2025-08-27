@@ -9,11 +9,12 @@ public class Task11SafeReadNumber {
         while (true) {
             System.out.println("Enter number:");
             try {
-                double number = in.nextDouble();
-                return number;
+                return in.nextDouble();
             } catch (InputMismatchException e) {
                 System.out.println("Error! Try again...");
                 in.nextLine();
+            } finally {
+                System.out.println("bruh");
             }
         }
     }
