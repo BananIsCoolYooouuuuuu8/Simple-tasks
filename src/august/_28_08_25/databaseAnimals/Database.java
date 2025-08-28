@@ -9,9 +9,9 @@ public abstract class Database {
 
     public void connect() throws SQLException {
         Random random = new Random();
-        boolean exceptionOrConnect = random.nextBoolean();
-        if (exceptionOrConnect) {
-            isConnected = true;
+        boolean isConnected = random.nextBoolean();
+        if (isConnected) {
+            this.isConnected = true;
         } else {
             throw new SQLException("An unknown error occurred during the connection.");
         }

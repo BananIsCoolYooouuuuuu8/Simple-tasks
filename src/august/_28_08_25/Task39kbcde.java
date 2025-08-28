@@ -27,10 +27,10 @@ public class Task39kbcde {
         double A = c;
         double B = d - k;
         double C = e - b;
-        double Discriminant = Math.pow(B, 2) - 4 * A * C;
-        if (Discriminant > 0) {
-            x1 = (-B + Math.sqrt(Discriminant)) / 2 * A;
-            x2 = (-B - Math.sqrt(Discriminant)) / 2 * A;
+        double discriminant = Math.pow(B, 2) - 4 * A * C;
+        if (discriminant > 0) {
+            x1 = (-B + Math.sqrt(discriminant)) / 2 * A;
+            x2 = (-B - Math.sqrt(discriminant)) / 2 * A;
             y1 = k * x1 + b;
             y2 = k * x2 + b;
             pointDistance1 = Math.sqrt(Math.pow(x1, 2) + Math.pow(y1, 2));
@@ -38,7 +38,7 @@ public class Task39kbcde {
             System.out.println("Point count: 2");
             System.out.println("Point1: coordinates: (" + x1 + ";" + y1 + "), distance: " + pointDistance1);
             System.out.println("Point2: coordinates: (" + x2 + ";" + y2 + "), distance: " + pointDistance2);
-        } else if (Discriminant == 0) {
+        } else if (discriminant == 0) {
             x0 = -B / (2 * A);
             y0 = k * x0 + b;
             pointDistance0 = Math.sqrt(Math.pow(x0, 2) + Math.pow(y0, 2));

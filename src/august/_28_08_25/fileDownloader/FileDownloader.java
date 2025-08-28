@@ -5,21 +5,20 @@ import java.util.regex.Pattern;
 
 public class FileDownloader {
 
-    private InternetConnectionChecker internetConnectionChecker = new InternetConnectionChecker();
+    public static final String regexUrl = "^(https?|ftp)://[a-zA-Z0-9.-]+(:\\d+)?(/[^\\s]*)?$";
+
+    private final InternetConnectionChecker internetConnectionChecker = new InternetConnectionChecker();
 
     void download(String url) throws BadUrlException, NoInternetConnectionException {
-        String regexUrl = "^(https?|ftp)://[a-zA-Z0-9.-]+(:\\d+)?(/[^\\s]*)?$";
         Pattern pattern = Pattern.compile(regexUrl);
         Matcher matcher = pattern.matcher(url);
         if (!(matcher.matches())) {
             throw new BadUrlException("BadUrlException");
-        } else {
-            if (!(internetConnectionChecker.hasInternetConnection())) {
-                throw new NoInternetConnectionException("NoInternetConnectionException");
-            } else {
-                System.out.println("The file was uploaded using the specified link.");
-            }
         }
+        if (!(internetConnectionChecker.hasInternetConnection())) {
+            throw new NoInternetConnectionException("NoInternetConnectionException");
+        }
+        System.out.println("The file was uploaded using the specified link.");
     }
 
     public static void main(String[] args) {

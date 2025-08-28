@@ -17,24 +17,22 @@ public class AnimalsDatabase extends Database {
     public Animal[] getAnimal() throws NoDatabaseConnectionDetectedException {
         if (isConnected) {
             return animals;
-        } else {
-            throw new NoDatabaseConnectionDetectedException();
         }
+        throw new NoDatabaseConnectionDetectedException();
     }
 
     public static void main(String[] args) {
         AnimalsDatabase animalsDatabase = new AnimalsDatabase();
         try {
             animalsDatabase.connect();
+            animalsDatabase.getAnimal();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
-        }
-        try {
-            animalsDatabase.getAnimal();
         } catch (NoDatabaseConnectionDetectedException e) {
             System.out.println("NoDatabaseConnectionDetectedException");
         } finally {
             System.out.println("The work with the database is completed");
         }
+        System.out.println("nkb");
     }
 }
