@@ -1,12 +1,12 @@
 package august._29_08_25;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
-public class CollectionsCars {
+public class HashSetCars {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        ArrayList<String> cars = new ArrayList<>();
+        HashSet<String> cars = new HashSet<>();
         while (true) {
             System.out.println("1 - add car.");
             System.out.println("2 - remove car.");
@@ -24,11 +24,10 @@ public class CollectionsCars {
                 case 2:
                     System.out.println("Enter car name:");
                     String carName2 = in.nextLine();
-                    int carName2Index = cars.indexOf(carName2);
-                    if (carName2Index > -1) {
-                        cars.remove(carName2Index);
+                    if (cars.remove(carName2)) {
                         System.out.println("Car " + carName2 + " successfully deleted");
-                        break;
+                    } else {
+                        System.out.println("Car " + carName2 + " was not deleted");
                     }
                     break;
                 case 3:
