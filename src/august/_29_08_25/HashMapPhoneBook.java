@@ -1,10 +1,12 @@
 package august._29_08_25;
 
 import java.util.HashMap;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class HashMapPhoneBook {
     public static void main(String[] args) {
+        int moveChoice = 0;
         Scanner in = new Scanner(System.in);
         HashMap<String, String> phoneNumbers = new HashMap<>();
         while (true) {
@@ -12,7 +14,13 @@ public class HashMapPhoneBook {
             System.out.println("2 - remove phone number.");
             System.out.println("3 - display the current phone number list.");
             System.out.println("4 - end the program");
-            int moveChoice = in.nextInt();
+            try {
+                moveChoice = in.nextInt();
+            } catch (InputMismatchException e) {
+                System.out.println("Incorrect mode is specified");
+                in.nextLine();
+                continue;
+            }
             in.nextLine();
             switch (moveChoice) {
                 case 1:
@@ -28,18 +36,19 @@ public class HashMapPhoneBook {
                     }
                     break;
                 case 2:
-                    System.out.println("Enter phone number");
-                    String phoneNumber2 = in.nextLine();
                     System.out.println("Enter name:");
                     String name2 = in.nextLine();
                     if (!(phoneNumbers.containsKey(name2))) {
                         System.out.println(name2 + " is not found in the phone book");
                     } else {
-                        phoneNumbers.remove(name2, phoneNumber2);
-                        System.out.println("Car " + name2 + " successfully deleted");
+                        phoneNumbers.remove(name2);
+                        System.out.println("Phone number " + name2 + " successfully deleted");
                     }
                     break;
                 case 3:
+                    if (phoneNumbers.isEmpty()) {
+                        System.out.println("Phone book is empty");
+                    }
                     for (String phoneNumberForEach : phoneNumbers.keySet()) {
                         System.out.println("Key: " + phoneNumberForEach + ", phone number: " + phoneNumbers.get(phoneNumberForEach));
                     }
