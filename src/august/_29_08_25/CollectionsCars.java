@@ -2,6 +2,7 @@ package august._29_08_25;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.function.Consumer;
 
 public class CollectionsCars {
     public static void main(String[] args) {
@@ -32,9 +33,16 @@ public class CollectionsCars {
                     }
                     break;
                 case 3:
-                    for (String car : cars) {
-                        System.out.println(car);
-                    }
+                    cars.forEach(string -> System.out.println(string));
+//                    cars.forEach(new Consumer<String>() {
+//                        @Override
+//                        public void accept(String string) {
+//                            System.out.println(string);
+//                        }
+//                    });
+//                    for (String car : cars) {
+//                        System.out.println(car);
+//                    }
                     break;
                 case 4:
                     System.out.println("Program is end");
