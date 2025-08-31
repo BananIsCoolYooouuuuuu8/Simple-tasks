@@ -2,6 +2,7 @@ package august._30_08_25;
 
 import java.util.*;
 import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
 import java.util.function.Consumer;
 
 public class ListIntegerA {
@@ -74,12 +75,13 @@ public class ListIntegerA {
         examResults.put("alex", 0);
         examResults.put("sarah", 0);
         examResults.put("borya", 120);
-        examResults.forEach((name, result) -> {
-            if (result > 0) {
-                result += 10;
+        examResults.replaceAll((_, mark) -> {
+            if (mark > 100) {
+                return mark + 10;
             }
-            System.out.println(name + ": " + result);
+            return mark;
         });
+        System.out.println(examResults);
         //g
         HashMap<String, Integer> order = new HashMap<>();
         order.put("pens", 5);
@@ -92,8 +94,13 @@ public class ListIntegerA {
         strings.add("duinc");
         strings.add("oijvwi");
         strings.add("pkv");
-        
-        strings.forEach(string -> {
+        strings.forEach(new Consumer<String>() {
+            int currentPosition = 0;
+            @Override
+            public void accept(String string) {
+                System.out.println(string + " current position: " + currentPosition);
+                currentPosition++;
+            }
         });
     }
     public static void addOrder(HashMap<String, Integer> hashMap, String name) {
