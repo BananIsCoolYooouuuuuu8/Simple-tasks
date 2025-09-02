@@ -1,7 +1,6 @@
 package august._31_08_25.person_to_game_character;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 public class MainGC {
